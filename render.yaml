@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: sporty-tracker-job
+    schedule: "*/5 * * * *"
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && playwright install"
+    startCommand: "python main.py"
